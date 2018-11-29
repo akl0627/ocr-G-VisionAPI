@@ -1,4 +1,4 @@
-# Photo Album Example
+# 画像をアップしてVisionAPIを使うよ
 
 Disclaimer: This is not an official Google product.
 and @akl0627 add codes to original.
