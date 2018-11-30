@@ -110,6 +110,10 @@ class PhotoForm(Form):
 class TagForm(Form):
     tag = SelectField('Tag')
 
+# add_20181130 OCRよびだし
+class OcrForm(Form):
+    ocr = SelectField('ocr')
+# add_20181130 OCRよびだし end
 
 @app.route('/')
 def index():
