@@ -12,7 +12,3 @@ handlers:
 env_variables:
   LANG_TAG: 'ja'
   TIMESTAMP_TZ: 'Asia/Tokyo'
-
-libraries:
-- name: ssl
-  version: latest
