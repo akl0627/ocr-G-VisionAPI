@@ -1,7 +1,6 @@
-# 画像をアップしてVisionAPIを使うよ
+# Photo Album Example
 
 Disclaimer: This is not an official Google product.
-and @akl0627 add codes to original.
 
 This is an example application demonstrating how Vision API and Translation
  API can be used to create a photo album application which automatically add
@@ -79,7 +78,7 @@ env_variables:
 
 ```shell
 $ pip install -r requirements.txt -t lib
-$ gcloud app create
+$ gcloud beta app create
 $ gcloud datastore create-indexes index.yaml
 $ gcloud app deploy
 ```

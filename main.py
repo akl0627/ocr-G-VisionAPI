@@ -14,9 +14,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# 20181129 解説コメント追加
 
 import os, uuid
+
 from flask import Flask, render_template, request, redirect, url_for
 from flask_wtf.file import FileField
 from pytz import timezone, utc
@@ -29,11 +29,10 @@ from google.appengine.api import app_identity
 from google.appengine.ext import ndb
 from google.cloud import vision, translate
 
+
 app = Flask(__name__)
 
-# 保存できる画像枚数の最大値を指定
 MAX_PHOTOS = 20
-# 画像タイプ指定
 content_types = {'jpg': 'image/jpeg', 'jpeg': 'image/jpeg',
                  'png': 'image/png', 'gif': 'image/gif'}
 extensions = sorted(content_types.keys())
@@ -110,10 +109,6 @@ class PhotoForm(Form):
 class TagForm(Form):
     tag = SelectField('Tag')
 
-# add_20181130 OCRよびだし
-class OcrForm(Form):
-    ocr = SelectField('ocr')
-# add_20181130 OCRよびだし end
 
 @app.route('/')
 def index():
